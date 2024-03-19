@@ -16,9 +16,9 @@ export default {
   theme: {
     colors: {
       primary,
-      black: colors.black,
-      white: colors.white,
-      transparent: colors.transparent,
+      black:colors.black,
+      white:colors.white,
+      transparent:colors.transparent,
       yellow: {
         700: '#F5C521'
       },
@@ -77,6 +77,8 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+
+  ],
 }
 

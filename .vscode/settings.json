@@ -1,6 +1,10 @@
 {
   "cSpell.words": [
     "Nuxt",
-    "tailwindcss"
-  ]
+    "tailwindcss",
+  ],
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.scss": "tailwindcss"
+  }
 }
