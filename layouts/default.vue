@@ -3,7 +3,8 @@
 </script>
 
 <template>
-	<section class="layout" style="min-height: 100vh">
+	<section class="layout">
+		<LayoutNavigation />
 		<div>
 			<slot />
 		</div>
