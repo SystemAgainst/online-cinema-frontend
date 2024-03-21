@@ -54,6 +54,7 @@ import { BASIC_MENU, MENU_LIST } from './menu.data';
 				}
 			}
 
+			// TODO: It doesn't work yet. Update it later
 			// &.active {
 			// 	@apply border-r-primary;
 			// 	> .menu__link > .menu__item-text {
