@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-
+// TODO: mb create skeleton for menu items
 </script>
 
 <template>
