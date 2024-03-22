@@ -1,17 +1,19 @@
 <script lang="ts" setup>
-import { BASIC_MENU, MENU_LIST } from './menu.data';
+import { BASIC_MENU, GENERAL_MENU } from './menu.data';
+
+
+const { data: genres } = await useAsyncData(
+  'popular-genre-list',
+  () => $fetch('http://localhost:7070/api/v1/genres?searchTerm')
+);
 </script>
 
 <template>
-	<div 
-		v-for="(menu, index) in MENU_LIST" 
-		:key="index"
-		class="menu"
-	>
-		<h2 class="menu__heading">{{ menu.title }}</h2>
-		<ul class="menu__container">
+	<div class="menu">
+		<h2 class="menu__heading">{{ BASIC_MENU.title }}</h2>
+		<ul class="menu__container mb-20">
 			<li 
-				v-for="(item, itemIndex) in menu.items" 
+				v-for="(item, itemIndex) in BASIC_MENU.items"
 				:key="itemIndex"
 				class="menu__list"
 				:exact="true"
@@ -21,6 +23,19 @@ import { BASIC_MENU, MENU_LIST } from './menu.data';
 						<Icon :name="item.icon" class="menu__item-icon" />
 						<span class="menu__item-text">{{ item.title }}</span>
 					</NuxtLink>
+			</li>
+		</ul>
+
+		<h2 class="menu__heading">Popular Genres</h2>
+		<ul class="menu__container">
+			<li 
+				class="menu__list"
+				v-for="(item, idx) in genres"
+				:key="idx"
+			>
+				<NuxtLink :to="item?.slug" class="menu__link">
+					<span class="menu__item-text">{{ item.name }}</span>
+				</NuxtLink>
 			</li>
 		</ul>
   </div>
