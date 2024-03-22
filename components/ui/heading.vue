@@ -7,7 +7,8 @@ const props = defineProps({
   },
   classProp: {
     type: String,
-    default: `text-white text-opacity-80 font-semibold text-3xl`
+    required: true,
+    default: `text-white text-opacity-80 font-semibold`
   },
 })
 

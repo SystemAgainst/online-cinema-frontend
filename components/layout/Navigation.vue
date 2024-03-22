@@ -5,13 +5,13 @@
 <template>
 	<aside class="navigation">
 		<NuxtLink to="/" class="px-layout mb-10 block">
-			<NuxtImg src="/logo.svg" alt="Logo of online cinema" width="247" />
+			<NuxtImg src="/logo.svg" alt="Logo of online cinema" width="247" height="37" />
 		</NuxtLink>
-		<button
+		<!-- <button
 			class="absolute top-2 right-3 transition-colors hover:text-primary"
 		>
 			<Icon name="line-md:logout" size="20" style="color: white;" />
-		</button>
+		</button> -->
 		<LayoutMenu />
 	</aside>
 </template>

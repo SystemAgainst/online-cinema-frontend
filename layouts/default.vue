@@ -5,7 +5,7 @@
 <template>
 	<section class="layout">
 		<LayoutNavigation />
-		<div>
+		<div class="center">
 			<slot />
 		</div>
 		</section>
@@ -19,22 +19,19 @@ $bar-width: 20%;
 
 	> div:first-child,
 	> div:last-child {
-		@apply fixed top-0 bottom-0 overflow-y-scroll;
-		width: $bar-width;
-		max-width: 350px;
+		@apply fixed top-0 bottom-0;
 	}
 
 	> div:first-child {
 		@apply left-0 border-r border-r-gray-800;
-	}
-
-	> .center {
-		@apply min-h-screen p-layout;
-		margin: 0 $bar-width;
+		width: $bar-width;
+		max-width: 350px;
 	}
 
 	> div:last-child {
-		@apply right-0 border-l border-l-gray-800;
+		@apply border-l border-l-gray-800 min-h-screen p-layout;
+		margin: 0 $bar-width;
 	}
 }
+
 </style>
