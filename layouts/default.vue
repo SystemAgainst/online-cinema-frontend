@@ -8,7 +8,7 @@
 		<div>
 			<slot />
 		</div>
-	</section>
+		</section>
 </template>
 
 <style scoped lang="scss">
