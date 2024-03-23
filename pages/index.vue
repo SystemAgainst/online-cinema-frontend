@@ -4,7 +4,10 @@
 
 <template>
   <div class="home">
-    <UiHeading title="Watch online cinema" className="text-gray-300 mb-8 text-xl" />
+    <UiHeading 
+      title="Watch movies online"
+			className="text-gray-500 mb-8 text-xl"
+    />
   </div>
 </template>
 

@@ -50,36 +50,35 @@ const { data: genres } = await useAsyncData(
 	}
 
 	.menu__container {
-		> .menu__list {
+		> li {
 			@apply px-8 border-r-4 border-r-transparent transition-colors;
-			> .menu__link {
+			> a {
 				@apply flex items-center text-gray-600 px-3 mt-6 cursor-pointer;
 
-				> .menu__item-text {
+				> span {
 					@apply ml-3 text-lg hover:text-white;
 				}
 
-				> .menu__item-icon {
+				> svg {
 					@apply text-2lg;
 				}
 
-				> .menu__item-text,
-				> .menu__item-icon {
+				> span,
+				> svg {
 					@apply transition-colors;
 				}
 			}
 
-			// TODO: It doesn't work yet. Update it later
-			// &.active {
-			// 	@apply border-r-primary;
-			// 	> .menu__link > .menu__item-text {
-			// 		@apply text-white;
-			// 	}
+			&.active {
+				@apply border-r-primary;
+				> a > span {
+					@apply text-white;
+				}
 
-			// 	> .menu__link > .menu__item-icon {
-			// 		@apply fill-primary;
-			// 	}
-			// }
+				> a > svg {
+					@apply fill-primary;
+				}
+			}
 		}
 	}
 }
