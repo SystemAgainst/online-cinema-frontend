@@ -9,7 +9,7 @@
 			<slot />
 		</div>
 		<LayoutSidebar />
-		</section>
+	</section>
 </template>
 
 <style scoped lang="scss">
@@ -31,7 +31,7 @@ $bar-width: 20%;
 
 	> .center {
 		@apply min-h-screen p-layout;
-		margin: 0 $bar-width;
+		margin: -34rem $bar-width;
 	}
 
 	> div:last-child {
