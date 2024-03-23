@@ -12,7 +12,7 @@ const { data: genres } = await useAsyncData(
 	<div class="menu">
 		<h2 class="menu__heading">{{ BASIC_MENU.title }}</h2>
 		<ul class="menu__container mb-20">
-			<li 
+			<li
 				v-for="(item, itemIndex) in BASIC_MENU.items"
 				:key="itemIndex"
 				class="menu__list"
@@ -52,10 +52,10 @@ const { data: genres } = await useAsyncData(
 	.menu__container {
 		> li {
 			@apply px-8 border-r-4 border-r-transparent transition-colors;
-			> a {
+			> .menu__link {
 				@apply flex items-center text-gray-600 px-3 mt-6 cursor-pointer;
 
-				> span {
+				> .menu__item-text {
 					@apply ml-3 text-lg hover:text-white;
 				}
 
@@ -63,7 +63,7 @@ const { data: genres } = await useAsyncData(
 					@apply text-2lg;
 				}
 
-				> span,
+				> .menu__item-text,
 				> svg {
 					@apply transition-colors;
 				}
@@ -71,11 +71,11 @@ const { data: genres } = await useAsyncData(
 
 			&.active {
 				@apply border-r-primary;
-				> a > span {
+				> .menu__link > .menu__item-text {
 					@apply text-white;
 				}
 
-				> a > svg {
+				> .menu__link > svg {
 					@apply fill-primary;
 				}
 			}

@@ -20,7 +20,7 @@ $bar-width: 20%;
 
 	> div:first-child,
 	> div:last-child {
-		@apply fixed top-0 bottom-0 overflow-y-scroll;
+		@apply fixed top-0 bottom-0;
 		width: $bar-width;
 		max-width: 350px;
 	}
@@ -31,7 +31,7 @@ $bar-width: 20%;
 
 	> .center {
 		@apply min-h-screen p-layout;
-		margin: -34rem $bar-width;
+		margin: 0 $bar-width;
 	}
 
 	> div:last-child {
