@@ -16,7 +16,7 @@ export interface IActor {
   _id: string;
   photo: string;
   name: string; 
-  countMovies: string;
+  countMovies: string; // ?
   slug: string;
 }
 
@@ -30,6 +30,6 @@ export interface IMovie {
   actors: IActor[];
   countOpened: number;
   videoUrl: string;
-  rating: string;
+  rating: string; // ?
   slug: string;
 }

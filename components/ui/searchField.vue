@@ -1,22 +1,22 @@
 <script lang="ts" setup>
 defineProps<{
-  modelValue: string;
+  searchTerm: string;
 }>();
 
-const emit = defineEmits(["update:modelValue"]);
+const emit = defineEmits(["update:searchTerm"]);
 
 const handleSearch = (event: Event) => {
   const inputValue = (event.target as HTMLInputElement).value;
-  emit('update:modelValue', inputValue);
+  emit('update:searchTerm', inputValue);
 };
 </script>
 
 <template>
   <div class="search">
-    <MaterialIcon name="MdSearch" />
+    <Icon name="radix-icons:magnifying-glass" style="color: white;" />
     <input 
       placeholder="Search" 
-      :value="modelValue" 
+      :value="searchTerm" 
       @input=handleSearch 
     />
   </div>
