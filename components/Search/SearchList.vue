@@ -1,14 +1,14 @@
 <script lang="ts" setup>
 import type { IMovie } from "@/shared/types/movie.types";
 defineProps<{
-  movies: IMovie;
-}>()
+  movies: IMovie[];
+}>();
 </script>
 
 <template>
   <div v-if="movies" class="search-list">
     <div v-for="(movie, idx) in movies" :key="idx">
-      <NuxtLink to="">
+      <NuxtLink :to="movie?.slug">
         <NuxtImg 
           :src="movie?.poster" 
           :alt="movie?.title" 
@@ -21,6 +21,9 @@ defineProps<{
       </NuxtLink>
     </div>
   </div>
+	<div v-else class="text-white text-center my-4">
+		Movies not found
+	</div>
 </template>
 
 <style scoped lang="scss">

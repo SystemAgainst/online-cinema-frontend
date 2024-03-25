@@ -5,7 +5,6 @@
 <template>
   <div class="sidebar">
     <Search />
-    <!-- <SearchList /> -->
   </div>
 </template>
 
